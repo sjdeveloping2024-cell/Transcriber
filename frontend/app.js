@@ -221,7 +221,7 @@
         state.supported = false;
         state.supportIssue = {
           status: "On-device engine unavailable",
-          hint: `${state.localError} Restart Lilt with start.bat, or open it in Chrome or Edge.`,
+          hint: `${state.localError} Restart the local server, or open it in Chrome or Edge.`,
         };
         syncUI();
         renderTranscript();
@@ -322,7 +322,7 @@
         status: "On-device engine unavailable",
         hint:
           state.localError ||
-          "Restart Lilt with start.bat, or open it in Chrome or Edge.",
+          "Restart the local server, or open it in Chrome or Edge.",
       };
       syncUI();
       renderTranscript();

@@ -80,7 +80,7 @@ def get_local_model():
             from vosk import Model, SetLogLevel
         except ImportError:
             _local_model_error = (
-                "The on-device speech engine isn’t installed. Run start.bat to install it."
+                "The on-device speech engine isn’t installed. Install Vosk, then restart the server."
             )
             raise RuntimeError(_local_model_error) from None
 

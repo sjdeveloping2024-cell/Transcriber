@@ -13,11 +13,9 @@ Lilt has two separate ways to transcribe. They can both be used, but not at the 
 From `C:\Transcriber`:
 
 ```powershell
-python -m pip install -r requirements.txt
+python -m pip install Flask vosk
 python backend\Transcriber.py
 ```
-
-Or double-click `start.bat`.
 
 The app opens automatically at [http://127.0.0.1:5000](http://127.0.0.1:5000). Allow microphone access when your browser asks.
 
@@ -68,7 +66,7 @@ Your transcript is stored in this browser's local storage. The app never saves a
 
 The English model is included in `backend/models/vosk-model-small-en-us-0.15` (about 65 MB) so the local engine works without a download. The first take loads it once and can take a second longer; later takes start immediately. On-device transcription uses [Vosk](https://alphacephei.com/vosk/) and its small English model (Apache 2.0).
 
-If the recorder says **On-device engine unavailable**, make sure that model folder exists and run `start.bat` once so `vosk` is installed, then reload the page.
+If the recorder says **On-device engine unavailable**, make sure that model folder exists and that `vosk` is installed (see **Web app** above), then restart the server and reload the page.
 
 ## Project structure
 
@@ -84,8 +82,6 @@ transcriber/
 │   ├── fonts/
 │   ├── index.html
 │   └── styles.css
-├── requirements.txt
 ├── requirements-whisper.txt
-├── start.bat
 └── start-whisper.bat
 ```
